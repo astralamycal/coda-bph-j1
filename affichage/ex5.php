@@ -17,13 +17,16 @@
             Liste des notes
         </h1>
         <ul>
-            <?php foreach ($grades as $subject){ ?>
+            <?php foreach ($grades as $language => $subject){ ?>
                 <li>
+                    <?= $language ?>
+                    <ul>
                     <?php foreach ($subject as $grade){ ?>
-                        <ul>
+                        <li>
                             <?= $grade ?>
-                        </ul>
+                    </li>
                     <?php } ?>
+                    </ul>
                 </li>
             <?php } ?>
         </ul>
